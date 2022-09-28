@@ -1,0 +1,112 @@
+#projetos {
+  background-color: var(--secondary);
+}
+
+.projetos {
+  padding-top: 9.3rem;
+}
+
+.projetos h2,
+.projetos a {
+  text-align: center;
+}
+
+.projetos h2 {
+  padding-bottom: 7rem;
+}
+
+button {
+  padding: 1rem 10rem;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--bgLight);
+  border: none;
+  transition: ease-in-out 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary);
+}
+
+.github-link {
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  padding-bottom: 9.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.projetos a {
+  display: inline;
+}
+
+.pro {
+  background-color: var(--border);
+  height: 19.5rem;
+  width: 31rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+}
+
+.pro div p {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.pro:hover {
+  letter-spacing: 0.5rem;
+}
+
+.pro div {
+  background-color: var(--primary);
+  width: 100rem;
+  text-align: center;
+  padding: 5% 0;
+  transform: rotate(-50deg);
+}
+
+.escondido {
+  opacity: 0;
+  display: none;
+  transition: 1000ms;
+}
+
+.projetos-itens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.95rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .projetos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projetos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projetos-itens {
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px) {
+  .pro {
+    max-width: 30rem;
+  }
+}

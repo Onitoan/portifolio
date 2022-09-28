@@ -1,0 +1,130 @@
+#habilidades {
+    background-color: var(--primary);
+}
+
+.habilidades-pd {
+    padding-top: 9.3rem;
+}
+
+.habilidades-pd h2 { 
+    text-align: center;
+    padding-bottom: 7rem;
+}
+
+.skills-descricao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap:5rem;
+    padding-bottom: 7rem;
+}
+
+.conteiner-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    max-width: 55%;
+}
+
+.skill-box {
+    height: 10.6rem;
+    width: 10.6rem;
+    background-color: var(--bgDark);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: ease 0.3s;
+}
+
+.skill-box:hover {
+    background-color: var(--white);
+    transform: scale(1.05);
+}
+
+.conteiner-descricao {
+    color: var(--white);
+    font-family: 'Quando', serif;
+    font-size: 2rem;
+    max-width: 40%;
+}
+
+@media (max-width:1200px) {
+
+    .conteiner-descricao {
+        height: 26rem;
+    }
+
+    #habilidades {
+        display: flex;
+        justify-content: center;
+    }
+
+    .skills-descricao {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        gap:5rem;
+        padding-bottom: 7rem;
+        align-items: center;
+    }
+
+    .skills-descricao p {
+        text-align: center;
+    }
+
+}
+@media (max-width:950px) {
+    .conteiner-skills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3.7rem;
+        max-width: 30rem;
+    }
+
+    .conteiner-descricao {
+        max-width: 30rem;
+    }
+
+}
+
+.skill-box .icones-habilidades {
+    transition: ease-in-out 0.3s;
+}
+
+.skill-box:hover .icones-habilidades {
+    opacity: 0;
+}
+
+.skill1{
+    background-image: url(../img/html2.svg);
+}
+
+.skill2 {
+    background-image: url(../img/css2.svg);
+}
+
+.skill3 {
+    background-image: url(../img/js2.svg);
+}
+
+.skill4 {
+    background-image: url(../img/react2.svg);
+}
+
+.skill5 {
+    background-image: url(../img/git2.svg);
+}
+
+.skill6 {
+    background-image: url(../img/github2.svg);
+}
+
+#fundo {
+    fill: red;
+}

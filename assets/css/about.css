@@ -1,0 +1,134 @@
+#sobre-mim {
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+}
+
+ 
+.ajustador-2 {
+    padding: 14.4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.7rem;
+    max-width: 106.4rem;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4.5rem;
+    color: var(--white);
+    padding-bottom: 2rem;
+}
+
+#strong {
+    text-align: center;
+    font-size: 3rem;
+}
+.circulo {
+    position: absolute;
+}
+
+.avatar {
+    width: 32.3rem;
+    height: 36.8rem;
+    position: relative;
+    cursor: pointer;
+    transition: ease 1s;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+@keyframes html {
+    0% {
+        /* bottom: 0; */
+        left: 25rem;
+    }
+    100% {
+        /* bottom: 0; */
+        left: 5rem;
+    }
+}
+
+@keyframes css {
+    0% {
+        /* bottom: 0; */
+        left: 5rem;
+    }
+    100% {
+        /* bottom: 0; */
+        left: 25rem;
+    }
+}
+
+.html {
+    /* bottom: 0; */
+    left: 0;
+    animation: html 3s infinite linear alternate-reverse ;
+}
+
+.js {
+    /* bottom: 0; */
+    left: 15rem;
+}
+
+.css {
+    /* bottom: 0; */
+    left: 30rem;
+    animation: css 3s infinite linear alternate-reverse;
+}
+
+.sobre-mim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-mim p {
+    text-indent: 3rem;
+    font-size: 2rem;
+    max-width: 60.925rem;
+    color: var(--white);
+}
+
+@media (max-width:1200px) {
+    .ajustador-2 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .avatar {
+        margin-right: 6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        padding-top: 4rem;
+    }
+
+    .ajustador-2 p {
+        font-size: 1.5rem;
+    }
+    .sobre-mim p {
+        text-indent: 0;
+    }
+}
+
+@media(max-width:950px){
+
+    .circulo {
+        display: none;
+    }
+    .ajustador-2 {
+        max-width: 35rem;
+        padding: 7rem 3rem;
+    }
+
+    .avatar {
+        margin-right: 0;
+    }
+
+}

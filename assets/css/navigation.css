@@ -1,0 +1,348 @@
+:root{
+    font-size: 62.5%;
+
+    --primary: rgb(65, 105, 225);
+    --secondary: rgb(12, 12, 12);
+    --white: rgb(250, 250, 250);
+    --border: rgba(255, 255, 255, 0.452);
+    --bgDark: rgba(0, 0, 0, 0.527);
+    --bgLight: rgba(196, 196, 196, 0.11);
+    --hover: rgb(127, 205, 230);
+}
+
+/* criando barra de navegação */
+body {
+    background-color: var(--primary);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+nav {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: var(--white);
+    font-size: 1.52061rem;
+    transition: ease-in-out 0.3s;
+}
+
+a:hover {
+ color: var(--hover);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.logo {
+    padding: 1rem 0;
+}
+
+.barra {
+    width: 100%;
+    background: var(--bgLight);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: solid 1px var(--border);
+}
+
+.barra-conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.centralizador {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+/* barra de navegação terminada */
+
+/* criando início */
+#inicio {
+    background-color: var(--secondary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 68.5% 90%, 0 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.altura-ajuste{
+    width: 100%;
+}
+
+.ajustador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.apresentacao {
+    max-width: 74.1rem;
+    color:var(--white);
+}
+
+.descricao {
+    font-size: 2.5rem;
+    grid-area: descricao;
+}
+
+.meu-nome {
+    font-size: 5rem;;
+}
+
+.linkedin {
+    width: 47.9rem;
+    height: 8.5rem;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 62px;
+}
+
+.linkedin a {
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.link {
+    font-size:2.5rem;
+    width:50%;
+    text-align: center;
+    padding: 1.2rem 0 ;
+    transition: ease-in-out 0.3s;
+}
+
+.link:hover {
+    letter-spacing: 0.5rem;
+    color: var(--white);
+}
+
+.desenho {
+    width: 30rem;
+    grid-area: desenho;
+}
+
+@keyframes desenhoAnimacao {
+    from {
+        top:-1.5rem;
+    }
+    to {
+        top: 2.5rem;
+    }
+}
+
+.desenho2 {
+    max-width: 150%;
+    width: 50rem;
+    position:relative;
+    animation: desenhoAnimacao 2.1s infinite alternate-reverse linear;
+}
+
+.close-menu {
+    display: none;
+}
+
+.meu-nome::after{
+    content: '|';
+    margin-left: 0.5rem;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    
+    #inicio{
+        background: var(--secondary);
+        height: auto;
+        clip-path: none;
+    }
+
+    .ajustador {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+
+    .desenho {
+        padding: 10rem 0;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .linkedin {
+        width: 47.9rem;
+        margin-top: 1.5rem;
+    }
+
+    .esquerda {
+        margin-left: 1.5rem;
+    }
+
+    .direita {
+        margin-right: 1.5rem;
+    }
+
+}
+
+@media (max-width:950px) {
+    .desenho {
+        padding: 2.5rem 0;
+    }
+
+    .altura-ajuste{
+        display: flex;
+        justify-content: center;
+    }
+    .organizador {
+        max-width: 30rem;
+        display: grid;
+        grid-template-columns: 30rem;
+        grid-template-areas:  
+        "desenho"
+        "descricao";
+        line-height: 3.5rem;
+    }
+
+    #inicio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .desenho {
+        display: flex;
+        justify-content: center;
+    }
+
+    .descricao {
+        font-size: 2rem;
+    }
+
+    .meu-nome {
+        font-size: 3rem;
+    }
+
+    .esquerda, .direita {
+        margin: 0;
+    }
+
+    .logo {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .barra{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-centro{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .centralizador{
+        margin: 0;
+    }
+    .barra-conteiner {
+        width: 30rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .barra-conteiner .logo{
+        width: 100%
+    }
+
+    .direita ul {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .direita ul a {
+        font-size: 3.5rem;
+    }
+
+    /* configurando menu mobile */
+    .barra {
+        display: block;
+        position: fixed;
+        top: -100vh;
+        transition: ease 0.3s;
+    }
+    
+    .close-menu-label::after {
+        content:'≡';
+        position: fixed;
+        z-index: 2;
+        top: 3.2rem;
+        right: 3.2rem;
+        background: var(--bgLight);
+        color: var(--white);
+        font-size: 4.8rem;
+        line-height:4.8rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* ✕ */
+    .close-menu:checked~.barra {
+        top: 0;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        display: block;
+        content: '✕';
+    }
+
+    .barra .barra-conteiner ul li a{
+        font-size: 2.5rem;
+    }
+
+    .barra {
+        background: var(--bgDark);
+    }
+
+}
